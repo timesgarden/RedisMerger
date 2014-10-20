@@ -11,5 +11,10 @@ import os
 cp = ConfigParser.ConfigParser()
 cp.read(os.path.join(os.path.dirname(__file__), 'GlobalConfig.ini'))
 
-REDIS_HOST = cp.get("REDIS", "REDIS_HOST")
-REDIS_PORT = cp.get("REDIS", "REDIS_PORT")
+FROM_REDIS_HOST = cp.get("FROM REDIS", "FROM_REDIS_HOST")
+FROM_REDIS_PORT = cp.get("FROM REDIS", "FROM_REDIS_PORT")
+FROM_REDIS_DB = cp.get("FROM REDIS", "FROM_REDIS_DB")
+
+TO_REDIS_HOST = cp.get("TO REDIS", "TO_REDIS_HOST")
+TO_REDIS_PORT = cp.get("TO REDIS", "TO_REDIS_PORT")
+TO_REDIS_DB = cp.get("TO REDIS", "TO_REDIS_DB")
